@@ -1,6 +1,6 @@
 # drift_crud
 
-A new Flutter project.
+In this project i just implemented the DriftIsolates 
 
 ## Getting Started
 
