@@ -10,7 +10,7 @@ part 'studentdb.g.dart';
 
 @DriftDatabase(tables: [Student])
 class MyDatabase extends _$MyDatabase {
-  MyDatabase() : super(NativeDatabase.memory());
+  MyDatabase() : super(DbType.openConnection());
 
   MyDatabase.connect(DatabaseConnection connection) : super.connect(connection);
 
@@ -62,4 +62,20 @@ class _IsolateStartRequest {
   final String targetPath;
 
   _IsolateStartRequest(this.sendDriftIsolate, this.targetPath);
+}
+
+class DbType {
+  static LazyDatabase openConnection() {
+    return LazyDatabase(() async {
+      final dbFolder = await getApplicationDocumentsDirectory();
+      final file = File(p.join(dbFolder.path, 'db.sqlite'));
+      return NativeDatabase(file);
+    });
+  }
+
+  static Future<MyDatabase> connectToDb() async {
+    final connection = await createDriftIsolateAndConnect();
+    final db = MyDatabase.connect(connection);
+    return db;
+  }
 }

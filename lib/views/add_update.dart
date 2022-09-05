@@ -7,12 +7,14 @@ import 'package:get/get.dart';
 
 class AddUpdateStudent extends StatefulWidget {
   final bool isUpdate;
+  final DbType? dbType;
   final StudentCompanion? stdDatas;
 
-  const AddUpdateStudent({
+  AddUpdateStudent({
     Key? key,
     required this.isUpdate,
     this.stdDatas,
+    this.dbType,
   }) : super(key: key);
 
   @override
