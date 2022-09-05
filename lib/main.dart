@@ -1,7 +1,3 @@
-import 'dart:isolate';
-
-import 'package:drift/drift.dart';
-import 'package:drift/native.dart';
 import 'package:drift_crud/database/studentdb.dart';
 import 'package:flutter/material.dart';
 import 'package:drift_crud/views/student_list.dart';
