@@ -1,6 +1,8 @@
 # drift_crud
 
-A new Flutter project.
+In this project i implemented the DriftIsolates.
+Using DriftIsolates the Database Operations are working in a different Isolate.
+Only the working is explained in this repo.
 
 ## Getting Started
 
