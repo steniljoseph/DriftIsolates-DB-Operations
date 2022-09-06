@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         kHeight,
-                        Center(
+                        const Center(
                           child: Text("With Isolates"),
                         ),
                         kHeight,
@@ -108,7 +108,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   kHeight,
-                  Center(
+                  const Center(
                     child: Text("Without Isolates"),
                   ),
                   kHeight,
